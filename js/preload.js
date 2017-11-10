@@ -13,11 +13,11 @@ TopDownGame.Preload.prototype = {
     //load game assets
     this.load.tilemap('level1', 'assets/tilemaps/firstlevel.json', null, Phaser.Tilemap.TILED_JSON);
     this.load.image('gameTiles', 'assets/images/simples_pimples.png');
-    this.load.image('greencup', 'assets/images/door.gif');
-    this.load.image('bluecup', 'assets/images/door.gif');
     this.load.image('player', 'assets/images/player.gif');
     // this.load.image('browndoor', 'assets/images/browndoor.png');
-    
+
+
+
   },
   create: function() {
     this.state.start('Game');
