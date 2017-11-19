@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <title>I Hate Squares</title>
     <script type="text/javascript" src="js/phaser.js"></script>
-    <script type="text/javascript" src="js/boot.js"></script>
-    <script type="text/javascript" src="js/preload.js"></script>
-    <script type="text/javascript" src="js/game.js"></script>
+    <!--<script type="text/javascript" src="js/boot.js"></script>-->
+    <!--<script type="text/javascript" src="js/preload.js"></script>-->
+    <!--<script type="text/javascript" src="js/game.js"></script>-->
+    <script type="text/javascript" src="js/Snake.js"></script>
     <style type="text/css">
         body {
             padding: 0px;
@@ -16,20 +17,20 @@
 </head>
 <body>
         <script type="text/javascript">
-        (function() {
-//                var TopDownGame = TopDownGame || {};
-                //Create a new game that fills the screen
-                TopDownGame.game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, '');
-
-                //Add all states
-                TopDownGame.game.state.add('Boot', TopDownGame.Boot);
-                TopDownGame.game.state.add("Preload", TopDownGame.Preload);
-                TopDownGame.game.state.add("Game", TopDownGame.Game);
-
-                //Start the first state
-                TopDownGame.game.state.start('Boot');
-
-        })();
+//        (function() {
+////                var TopDownGame = TopDownGame || {};
+//                //Create a new game that fills the screen
+//                TopDownGame.game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.AUTO, '');
+//
+//                //Add all states
+//                TopDownGame.game.state.add('Boot', TopDownGame.Boot);
+//                TopDownGame.game.state.add("Preload", TopDownGame.Preload);
+//                TopDownGame.game.state.add("Game", TopDownGame.Game);
+//
+//                //Start the first state
+//                TopDownGame.game.state.start('Boot');
+//
+//        })();
     </script>
 </body>
 </html>
