@@ -52,12 +52,21 @@ Snake.prototype.updateTick = function() {
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update});
 
 function preload() {
-
-    game.load.image('bunny', 'assets/sprites/bunny.png');
     game.load.image('snake', 'assets/images/player.gif');
+
+    game.load.tilemap('snakeGui', 'assets/tilemaps/SnakesTiled.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('snakeTileset', 'assets/images/snake.png');
 }
 
 function create() {
+
+    this.map = game.add.tilemap('snakeGui');
+    this.map.addTilesetImage('snake', 'snakeTileset');
+
+    this.bg = this.map.createLayer('bg');
+    this.gui = this.map.createLayer('gui');
+    this.bg.resizeWorld();
+
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
 
@@ -68,21 +77,21 @@ function create() {
     // this.snakeHead.anchor.setTo(0.5, 0.5);
     // game.add.existing(this.snakeHead);
 
-    this.grid = createArray(game.world.width / 25, game.world.height / 25);
+    // this.grid = createArray(game.world.width / 25, game.world.height / 25);
     // this.grid[1][1] = this.snakeHead;
 
-    this.player = {x : 0, y : 0};
-    this.player.direction = {x: 1, y: 0};
+    // this.player = {x : 0, y : 0};
+    // this.player.direction = {x: 1, y: 0};
 }
 
 function update() {
-    processInput(this.player, this.cursors);
-    this.tickCurr += game.time.elapsed;
-    if(this.tickCurr >= this.tickTime){
-        this.tickCurr = 0;
-        updateState(this.player, this.grid, this.tickTime);
-
-    }
+    // processInput(this.player, this.cursors);
+    // this.tickCurr += game.time.elapsed;
+    // if(this.tickCurr >= this.tickTime){
+    //     this.tickCurr = 0;
+    //     updateState(this.player, this.grid, this.tickTime);
+    //
+    // }
 }
 
 function updateState(player, grid, tickTime) {
